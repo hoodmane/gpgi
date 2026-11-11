@@ -5,6 +5,11 @@ requires = [
     "Cython>=3.0.12",
     "numpy>=2.0.0",
 ]
+# dependencies that must be installed for the *host* (target) platform when
+# cross compiling: numpy provides the C headers the extension is compiled against
+host-requires = [
+    "numpy>=2.0.0",
+]
 build-backend = "mesonpy"
 
 [project]
